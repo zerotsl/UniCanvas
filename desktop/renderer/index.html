@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>通用画布 · UniCanvas</title>
+    <link rel="icon" type="image/svg+xml" href="/icon.svg?v=2026-11-10" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div id="app-root"></div>
+    <div id="app-banner" class="app-banner" hidden>
+      <span class="app-banner-dot"></span>
+      <span class="app-banner-text">通用画布</span>
+      <span class="app-banner-alias">UniCanvas</span>
+      <span class="app-banner-path" id="app-banner-path"></span>
+      <button type="button" class="app-banner-btn" id="app-import">导入画板</button>
+    </div>
+    <div id="app-error" class="app-error" hidden></div>
+    <script src="/react.js"></script>
+    <script src="/react-dom.js"></script>
+    <script>
+      window.__ModuleLoader__ = {
+        load(definition) {
+          window.__DSIC_DEF__ = definition;
+        },
+      };
+    </script>
+    <script src="/client.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>

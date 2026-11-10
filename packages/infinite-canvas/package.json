@@ -1,0 +1,41 @@
+{
+  "name": "@local/infinite-canvas",
+  "version": "1.2.0",
+  "private": true,
+  "description": "UniCanvas（通用画布）：面向 AI 的通用画布主面板，人和 AI 共同编辑同一块画布",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./vault": "./vault.mjs",
+    "./ai": "./ai.mjs"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "model.js",
+    "store.js",
+    "vault.mjs",
+    "ai.mjs",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  },
+  "license": "MIT"
+}

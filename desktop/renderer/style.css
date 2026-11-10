@@ -1,0 +1,124 @@
+:root {
+  color-scheme: dark;
+  --dsw-alias-bg-base: #0b0f17;
+  --dsw-alias-bg-layer-1: #131a25;
+  --dsw-alias-bg-layer-2: #1a2331;
+  --dsw-alias-bg-overlay: #18202c;
+  --dsw-alias-border-l1: rgba(148, 163, 184, 0.22);
+  --dsw-alias-border-l2: rgba(148, 163, 184, 0.36);
+  --dsw-alias-brand-primary: #22d3ee;
+  --dsw-alias-label-primary: #e2e8f0;
+  --dsw-alias-label-secondary: #94a3b8;
+  --dsw-alias-state-error-primary: #f87171;
+  --dsw-alias-state-idle-primary: #64748b;
+  --dsw-alias-state-success-primary: #34d399;
+  --dsw-alias-state-warn-primary: #fbbf24;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: radial-gradient(circle at 20% 0%, rgba(34, 211, 238, 0.08), transparent 45%),
+    radial-gradient(circle at 90% 100%, rgba(168, 85, 247, 0.1), transparent 45%), #070b12;
+  color: var(--dsw-alias-label-primary);
+  font-family: 'Segoe UI', 'Microsoft YaHei', system-ui, sans-serif;
+}
+
+#app-root {
+  position: fixed;
+  inset: 0;
+}
+
+.app-banner {
+  position: fixed;
+  left: 12px;
+  bottom: 12px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(34, 211, 238, 0.35);
+  background: rgba(6, 12, 20, 0.86);
+  box-shadow: 0 8px 24px rgba(2, 6, 23, 0.55);
+  font-size: 11px;
+  color: #a5f3fc;
+  backdrop-filter: blur(6px);
+  max-width: min(720px, calc(100vw - 24px));
+}
+
+.app-banner-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22d3ee;
+  box-shadow: 0 0 8px #22d3ee;
+  flex: 0 0 auto;
+}
+
+.app-banner-text {
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  flex: 0 0 auto;
+}
+
+.app-banner-alias {
+  flex: 0 0 auto;
+  font: 10px/1 ui-monospace, Consolas, monospace;
+  letter-spacing: 0.18em;
+  color: rgba(103, 232, 249, 0.72);
+}
+
+.app-banner-path {
+  max-width: 280px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #64748b;
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 10px;
+  flex: 0 1 auto;
+}
+
+.app-banner-btn {
+  flex: 0 0 auto;
+  height: 22px;
+  padding: 0 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(34, 211, 238, 0.45);
+  background: rgba(34, 211, 238, 0.12);
+  color: #a5f3fc;
+  font: inherit;
+  font-size: 10.5px;
+  cursor: pointer;
+}
+
+.app-banner-btn:hover {
+  background: rgba(34, 211, 238, 0.24);
+}
+
+.app-banner-hint {
+  color: #64748b;
+  flex: 0 0 auto;
+}
+
+.app-error {
+  position: fixed;
+  inset: 24px;
+  z-index: 10000;
+  padding: 20px;
+  overflow: auto;
+  border-radius: 14px;
+  border: 1px solid rgba(248, 113, 113, 0.5);
+  background: rgba(12, 8, 12, 0.96);
+  color: #fecaca;
+  font: 12.5px/1.6 ui-monospace, Consolas, monospace;
+  white-space: pre-wrap;
+}
